@@ -7,10 +7,16 @@ ScriptsOnlyBuild:
     - Coin
     - EnemyHp
     - EnemySpawner
+    - Enemy_HpBar
     - GameManager
+    - MeteoLineMove
+    - MeteoRotation
+    - MeteoSpawner
     - PlayerController
     - PlayerHp
     - ScrollingObject
+    - Slime_Boss01
+    - Stage01
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -29,10 +35,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -48,7 +52,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Outline
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Stage01.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -63,11 +67,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
@@ -78,41 +86,53 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1522}
+      Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 2250}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 2270}
+      Script: {instanceID: 1532}
     - Class: 114
-      Script: {instanceID: 2676}
+      Script: {instanceID: 1796}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 1964}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 2188}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 3764}
+      Script: {instanceID: 2412}
     - Class: 114
-      Script: {instanceID: 5498}
+      Script: {instanceID: 2456}
     - Class: 114
-      Script: {instanceID: 34704}
+      Script: {instanceID: 2698}
     - Class: 114
-      Script: {instanceID: 34716}
+      Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 34720}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 35066}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 39088}
+      Script: {instanceID: 3354}
     - Class: 114
-      Script: {instanceID: 43088}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 46844}
+      Script: {instanceID: 3476}
+    - Class: 114
+      Script: {instanceID: 3788}
+    - Class: 114
+      Script: {instanceID: 3828}
+    - Class: 114
+      Script: {instanceID: 3844}
+    - Class: 114
+      Script: {instanceID: 4598}
+    - Class: 114
+      Script: {instanceID: 4848}
+    - Class: 114
+      Script: {instanceID: 5530}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -138,10 +158,22 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundLoop
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 7b27c87d5bbeeb1801942cbcc63ac1c1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHp
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -210,16 +242,40 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 5c7bdb1267d3e04ea257433eddb11656
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Enemy_HpBar
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeteoLineMove
+  - hash:
+      serializedVersion: 2
+      Hash: f400df924b5e85c322e145a148d5601c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 809209b3be5fda1bf2584708c30d30ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeteoSpawner
   - hash:
       serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
@@ -252,10 +308,22 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Coin
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 5bddb32bcb848f51c6efb9a0b86ba855
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeteoRotation
   - hash:
       serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
@@ -304,6 +372,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 2d26d4fb7290cc7ac3f0f82450779c8c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stage01
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -420,6 +494,18 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 965a4ae91ead6d8275de7fd77807c6f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Booster
+  - hash:
+      serializedVersion: 2
+      Hash: b192d97039104a1ef4cfe0784656775d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slime_Boss01
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -534,6 +620,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScrollingObject
+  - hash:
+      serializedVersion: 2
       Hash: b424b4eeb810aecb0ff91c62639241e9
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -574,6 +666,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: dd2874c83db7174040f241415bb27f0e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemySpawner
   - hash:
       serializedVersion: 2
       Hash: ef5c43f921427d03730f6ea4c848f07d
@@ -624,7 +722,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 41cfab9cf38144c613fd0a5618138a91
+      Hash: bf7bdb4b07005d2cb79aa85796d04dab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyHp
@@ -640,6 +738,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: a7eb9ef7e1d60949bdcf98e067cc4802
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Platform
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -664,55 +768,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackgroundLoop
-  - hash:
-      serializedVersion: 2
-      Hash: a7eb9ef7e1d60949bdcf98e067cc4802
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Platform
-  - hash:
-      serializedVersion: 2
-      Hash: 5b812ac3f2a297d39f987c7e4a01f8e8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemySpawner
-  - hash:
-      serializedVersion: 2
-      Hash: ae979bbc33fe5489a27d59463e243462
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScrollingObject
-  - hash:
-      serializedVersion: 2
-      Hash: 7b27c87d5bbeeb1801942cbcc63ac1c1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerHp
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Coin
-  - hash:
-      serializedVersion: 2
-      Hash: 8f1df300856e7da86d23b55a113bd9b4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Booster
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Stage01.unity
   playerPath: C:/Users/User/Desktop/Build/DragonFlight.apk

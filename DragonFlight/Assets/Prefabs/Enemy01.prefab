@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8040496634752968702}
   - component: {fileID: 8040496634752968703}
   - component: {fileID: 8040496634752968696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  maxhp: 100
   coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!50 &8040496634752968702

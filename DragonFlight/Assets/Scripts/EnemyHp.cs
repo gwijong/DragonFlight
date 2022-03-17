@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHp : MonoBehaviour
 {
     public int hp = 1;
+    public int maxhp = 1;
     public GameObject coin;
     public GameObject destroyParticle;
     private void Update()

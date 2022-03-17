@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour  //발판을 생성하고 주기적으
     float timeBetSpawnMax = 4f;  //다음 배치까지의 시간 간격 최댓값
     float timeBetSpawn;  // 다음 배치까지의 시간 간격
 
-    float ypos = 5f;  //배치할 위치의 y 값
+    public float ypos = 5f;  //배치할 위치의 y 값
 
     public float xMin = -5f;  // 배치할 위치의 최소 x 값
     public float xMax = 5f;

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,7 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject panel;
 
     public int score = 0;  // 게임 점수
-
+    public bool victory = false;
+    public GameObject VictoryUi;
+    bool flag1 = false;
     private void Awake()  //게임 시작과 동시에 싱글턴을 구성
     {
         if(instance == null)  // 싱글턴 변수 instance가 비어 있는가?
@@ -37,6 +41,12 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("게임 종료");
+            Application.Quit();
+        }
+
         if (panel.activeSelf==true)
         {
             Time.timeScale = 0.0f;
@@ -44,6 +54,12 @@ public class GameManager : MonoBehaviour
         else
         {
             Time.timeScale = 1f;
+        }
+
+        if(victory && flag1 == false)
+        {
+            flag1 = true;
+            StartCoroutine("Victory");
         }
     }
 
@@ -73,7 +89,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.1f;
     }
 
-
-
+    IEnumerator Victory()
+    {
+        VictoryUi.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        VictoryUi.SetActive(false);
+    }
    
 }
