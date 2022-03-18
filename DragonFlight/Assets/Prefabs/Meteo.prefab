@@ -9717,7 +9717,7 @@ GameObject:
   - component: {fileID: 1146025471656610690}
   m_Layer: 9
   m_Name: Meteo
-  m_TagString: Enemy
+  m_TagString: Meteo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

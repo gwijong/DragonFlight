@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Slime_Boss01 : MonoBehaviour
 {
-    public GameObject Child;
     bool flag1 = false;
-    GameObject child1;
-    GameObject child2;
+    public GameObject child1;
+    public GameObject child2;
     public float Speed = 1;
-
+    float moveTime;
     void Start()
     {
         
@@ -22,16 +21,10 @@ public class Slime_Boss01 : MonoBehaviour
         {
             Debug.Log("슬라임 분열");
             flag1 = true;
-            child1 = Instantiate(Child);
-            child1.transform.position = transform.position + new Vector3(0.5f, 0, 0);
-            child2 = Instantiate(Child);
-            child2.transform.position = transform.position + new Vector3(-0.5f, 0, 0);
-        }
-
-        if(child1!=null && child2 != null)
-        {
-            child1.transform.Translate(1* Speed*Time.deltaTime, 0, 0);
-            child2.transform.Translate(-1 * Speed * Time.deltaTime, 0, 0);
+            child1.SetActive(true);
+            child2.SetActive(true);
+            child1.transform.position = transform.position + new Vector3(Random.Range(0.8f,1.2f), Random.Range(-0.4f, 0.4f), 0);
+            child2.transform.position = transform.position + new Vector3(Random.Range(-1.2f, -0.8f), Random.Range(-0.4f, 0.4f), 0);
         }
     }
 }

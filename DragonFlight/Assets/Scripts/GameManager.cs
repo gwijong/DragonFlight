@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 
         if(victory && flag1 == false)
         {
+            victory = false;
             flag1 = true;
             StartCoroutine("Victory");
         }
@@ -92,8 +93,9 @@ public class GameManager : MonoBehaviour
     IEnumerator Victory()
     {
         VictoryUi.SetActive(true);
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
         VictoryUi.SetActive(false);
+        flag1 = false;
     }
    
 }
