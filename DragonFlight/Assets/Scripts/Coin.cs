@@ -33,7 +33,13 @@ public class Coin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             GameManager.instance.AddScore(1000);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "Destroy")
+        {
+            Destroy(gameObject);
         }
     }
 }

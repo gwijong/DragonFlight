@@ -14,21 +14,21 @@ public class EnemySpawner : MonoBehaviour  //발판을 생성하고 주기적으
     public float xMin = -5f;  // 배치할 위치의 최소 x 값
     public float xMax = 5f;
 
-    GameObject[] platforms; //미리 생성한 발판들
+    GameObject[] Enemy; //미리 생성한 적들
     int currentIndex = 0;  // 사용할 현재 순번의 발판
 
-    Vector2 poolPosition = new Vector2(-15, -25);  //초반에 생성한 발판을 화면 밖에 숨겨둘 위치
+    Vector2 poolPosition = new Vector2(-150, -25);  //초반에 생성한 발판을 화면 밖에 숨겨둘 위치
     float lastSpawnTime;  // 마지막 배치 시점
 
     void Start()  //변수를 초기화하고 사용할 발판을 미리 생성
     {
         if (platformPrefab != null)
         {
-            platforms = new GameObject[count];
+            Enemy = new GameObject[count];
 
             for (int i = 0; i < count; i++)
             {
-                platforms[i] = Instantiate(platformPrefab, poolPosition, Quaternion.identity);
+                Enemy[i] = Instantiate(platformPrefab, poolPosition, Quaternion.identity);
             }
         }
         lastSpawnTime = 0f;
@@ -54,10 +54,10 @@ public class EnemySpawner : MonoBehaviour  //발판을 생성하고 주기적으
 
             float xPos = Random.Range(xMin, xMax);  //배치할 위치의 높이를 랜덤 설정
 
-            platforms[currentIndex].SetActive(false);
-            platforms[currentIndex].SetActive(true);
+            Enemy[currentIndex].SetActive(false);
+            Enemy[currentIndex].SetActive(true);            
 
-            platforms[currentIndex].transform.position = new Vector2(xPos, ypos ); //현재 순번의 발판을 화면 오른쪽에 재배치
+            Enemy[currentIndex].transform.position = new Vector2(xPos, ypos ); //현재 순번의 발판을 화면 오른쪽에 재배치
 
             currentIndex++; //순번 넘기기
 

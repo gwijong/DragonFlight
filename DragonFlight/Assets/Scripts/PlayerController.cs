@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Vector3 pos;
     Vector3 pos2;
     Vector3 posDistance;
-    float moveRange = 2.2f;
+    float moveRange = 3f;
     void Update()
     {
         if(GameManager.instance.isGameover == true)
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
                 (Camera.main.ScreenToWorldPoint(mousePos2) + posDistance).y > -moveRange * 2.2f
                )
             {
-                this.transform.position = Camera.main.ScreenToWorldPoint(mousePos2) + posDistance;
+                this.transform.position = new Vector3((Camera.main.ScreenToWorldPoint(mousePos2) + posDistance).x, this.transform.position.y,0);
             }
         }
     }
