@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Destroy
   - Meteo
+  - EnemyBullet
+  - BoosterBullet
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Background
   - Player
   - Enemy
-  - 
-  - 
+  - EnemyBullet
+  - BoosterBullet
   - 
   - 
   - 
