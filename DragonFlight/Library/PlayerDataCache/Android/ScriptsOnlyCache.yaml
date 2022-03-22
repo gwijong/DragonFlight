@@ -4,7 +4,11 @@ ScriptsOnlyBuild:
     - BackgroundLoop
     - Booster
     - BoosterBullet
+    - BossWarningLine
+    - Boss_Die_Chack
+    - Boss_Down_Move
     - Bullet
+    - BulletDestroy
     - Coin
     - EnemyChildActive
     - EnemyHp
@@ -20,6 +24,7 @@ ScriptsOnlyBuild:
     - SceneChange
     - ScrollingObject
     - Slime_Boss01
+    - Slime_Bullet_Attack
     - Slime_Child_Move
     - Slime_Clear_Check
     - Stage01
@@ -78,25 +83,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1474}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1532}
+      Script: {instanceID: 1534}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2066}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3478}
+      Script: {instanceID: 3364}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 36010}
+      Script: {instanceID: 4616}
     - Class: 114
-      Script: {instanceID: 36290}
+      Script: {instanceID: 5378}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -147,61 +152,71 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1474}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 1532}
+      Script: {instanceID: 1534}
     - Class: 114
-      Script: {instanceID: 1796}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 1964}
+      Script: {instanceID: 1966}
     - Class: 114
-      Script: {instanceID: 1982}
+      Script: {instanceID: 1984}
     - Class: 114
-      Script: {instanceID: 2188}
+      Script: {instanceID: 2192}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2292}
     - Class: 114
-      Script: {instanceID: 2412}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2456}
+      Script: {instanceID: 2460}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3356}
+      Script: {instanceID: 3096}
     - Class: 114
-      Script: {instanceID: 3400}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3478}
+      Script: {instanceID: 3364}
     - Class: 114
-      Script: {instanceID: 3662}
+      Script: {instanceID: 3408}
     - Class: 114
-      Script: {instanceID: 3792}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 3832}
+      Script: {instanceID: 3558}
     - Class: 114
-      Script: {instanceID: 3848}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 3674}
     - Class: 114
-      Script: {instanceID: 4798}
+      Script: {instanceID: 3804}
     - Class: 114
-      Script: {instanceID: 4856}
+      Script: {instanceID: 3844}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3860}
     - Class: 114
-      Script: {instanceID: 25316}
+      Script: {instanceID: 4616}
+    - Class: 114
+      Script: {instanceID: 4810}
+    - Class: 114
+      Script: {instanceID: 4868}
+    - Class: 114
+      Script: {instanceID: 5072}
+    - Class: 114
+      Script: {instanceID: 5414}
+    - Class: 114
+      Script: {instanceID: 5556}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -311,7 +326,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 5c7bdb1267d3e04ea257433eddb11656
+      Hash: 7937eea11841e9e617fb58fcbbf0f242
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy_HpBar
@@ -323,7 +338,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: e782e7024201d961e8f275ed76253c22
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MeteoLineMove
@@ -333,6 +348,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Logo_UpDown
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -401,6 +422,12 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
+      Hash: a9e70503690d47bdd8d13a2e07e218b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slime_Bullet_Attack
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -443,7 +470,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 30a5585ee8c3c7b27659bececf2fc4a1
+      Hash: 60d10d8627c672fa4717bb82bb62f7fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Stage01
@@ -453,6 +480,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoosterBullet
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BossWarningLine
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -551,10 +584,22 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss_Down_Move
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BulletDestroy
   - hash:
       serializedVersion: 2
       Hash: 056a84a9871ceff248ca7070b460acb2
@@ -785,6 +830,12 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slime_Child_Move
+  - hash:
+      serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -813,6 +864,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneChange
+  - hash:
+      serializedVersion: 2
+      Hash: 4b41af4db31466d2f943394b09a5677f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boss_Die_Chack
   - hash:
       serializedVersion: 2
       Hash: bf7bdb4b07005d2cb79aa85796d04dab
@@ -861,24 +924,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Slime_Child_Move
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Logo_UpDown
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneChange
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

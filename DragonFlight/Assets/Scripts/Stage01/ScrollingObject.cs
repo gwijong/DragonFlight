@@ -12,7 +12,6 @@ public class ScrollingObject : MonoBehaviour
    
     void Update()
     {
-
         if (gameObject != null)
         {
             transform.Translate(Vector3.down * speed * Time.deltaTime);

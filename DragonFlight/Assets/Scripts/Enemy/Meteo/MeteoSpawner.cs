@@ -14,10 +14,16 @@ public class MeteoSpawner : MonoBehaviour
     public float height = -20.0f;
     GameObject war;
     float speed = 1;
+
+    private void OnEnable()
+    {
+        time = Random.Range(-10.0f, -7.0f);
+        speed = Random.Range(-0.8f, 0.8f);
+    }
+
     void Start()
     {
-        time = time - 10.0f;
-        speed = Random.Range(-0.8f, 0.8f);
+
     }
 
     void Update()
@@ -51,7 +57,7 @@ public class MeteoSpawner : MonoBehaviour
             {
                 time = -12;
                 GameObject met = Instantiate(meteo);
-                met.transform.position = war.transform.position;
+                met.transform.position = war.transform.position + new Vector3(0,2,0);
                 war.SetActive(false);
                 flag1=false;
             }
