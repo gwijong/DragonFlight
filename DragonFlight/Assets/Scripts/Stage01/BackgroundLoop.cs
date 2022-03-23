@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BackgroundLoop : MonoBehaviour
 {
-    private float height; //배경의 가로 길이
-    private void Awake()//가로 길이를 측정하는 처리
+    private float height;
+    private void Awake()
     {
-        BoxCollider2D backgroundCollider = GetComponent<BoxCollider2D>();  //BoxCollider2D 컴포넌트의 Size 필드의 x 값을 가로 길이로 사용
+        BoxCollider2D backgroundCollider = GetComponent<BoxCollider2D>();  
         height = backgroundCollider.size.y;
     }
-    void Update() //현재 위치가 원점에서 왼쪽으로 width 이상 이동했을 때 위치를 재배치
+    void Update() 
     {
         if(transform.position.y <= -height)
         {
@@ -18,11 +18,9 @@ public class BackgroundLoop : MonoBehaviour
         }
     }
 
-    private void Reposition()  // 위치를 재배치하는 메서드
-    {
-        //현재 위치에서 오른쪽으로 가로 길이 * 2 만큼 이동
+    private void Reposition()
+    {      
         Vector2 offset = new Vector2(0, height * 2f);
-        transform.position = (Vector2)transform.position + offset;
-        //transform.position = transform.position + new Vector3(width * 2, 0f, 0f);
+        transform.position = (Vector2)transform.position + offset;        
     }
 }

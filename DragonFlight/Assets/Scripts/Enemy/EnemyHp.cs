@@ -4,63 +4,33 @@ using UnityEngine;
 
 public class EnemyHp : MonoBehaviour
 {
+    bool isdead = false;
     public int hp = 1;
     public int maxhp = 1;
-    public GameObject coin;
     public GameObject destroyParticle;
-    private void Update()
+
+    private void OnEnable()
     {
-
+        isdead = false;
     }
-
     public void Hit(int AttackDamage)
     {
         hp = hp - AttackDamage;
-        if (hp <= 0)
+        if (hp <= 0 && isdead == false)
         {
-            int random = Random.Range(0, 4);
+            isdead = true;
             GameManager.instance.AddScore(500);
-            if(random == 0)
-            {
-                Coin1();
-            }
-            else if(random == 1)
-            {
-                Coin2();
-                Coin1();
-            }
-            else if(random == 2)
-            {
-                Coin3();
-                Coin1();
-            }
-            else
-            {
-                Coin1();
-                Coin2();
-                Coin3();
-            }
             GameObject dest = Instantiate(destroyParticle);
-            dest.transform.position = transform.position;
-            gameObject.SetActive(false);
+            dest.transform.position = transform.position;        
+            gameObject.GetComponent<DropItem>().DropCoin(Random.Range(0,6));
+            StartCoroutine("DeadTimer");
         }
     }
-    void Coin1()
+
+    IEnumerator DeadTimer()
     {
-        GameObject co1 = Instantiate(coin);
-        co1.transform.position = transform.position;
-        co1.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 20);
+        yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
     }
-    void Coin2()
-    {
-        GameObject co2 = Instantiate(coin);
-        co2.transform.position = transform.position + new Vector3(-0.2f, 0.2f, 0); ;
-        co2.GetComponent<Rigidbody2D>().AddForce(Vector3.left * 20);
-    }
-    void Coin3()
-    {
-        GameObject co3 = Instantiate(coin);
-        co3.transform.position = transform.position + new Vector3(0.2f, 0.2f, 0);
-        co3.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 20);
-    }
+
 }

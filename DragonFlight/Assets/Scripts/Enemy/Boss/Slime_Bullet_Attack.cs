@@ -12,12 +12,6 @@ public class Slime_Bullet_Attack : MonoBehaviour
         StartCoroutine("SpellStart");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     IEnumerator SpellStart()
     {
         do

@@ -8,12 +8,7 @@ public class Boss_Die_Chack : MonoBehaviour
     int allSlimeHpCheck;
     bool flag1 = false;
     bool flag2 = false;
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (cragon.activeSelf == true)

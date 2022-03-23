@@ -9715,6 +9715,7 @@ GameObject:
   - component: {fileID: 1146025471656610689}
   - component: {fileID: 1146025471656610691}
   - component: {fileID: 1146025471656610690}
+  - component: {fileID: 810562794453132611}
   m_Layer: 9
   m_Name: Meteo
   m_TagString: Meteo
@@ -9777,6 +9778,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &810562794453132611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146025471656610688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec872b3836545fd478f7c815f816904a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146025472088357129
 GameObject:
   m_ObjectHideFlags: 0

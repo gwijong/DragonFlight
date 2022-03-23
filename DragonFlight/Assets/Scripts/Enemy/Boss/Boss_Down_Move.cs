@@ -6,12 +6,7 @@ public class Boss_Down_Move : MonoBehaviour
 {
     float tm = 0;
     public float speed = 10;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameObject.activeSelf == true && tm<1f)

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public bool isGameover = false;  // 게임오버 상태
     public Text scoreText;  // 점수를 출력할 UI 텍스트
     public GameObject gameoverUI;  // 게임오버 시 활성화할 UI 게임 오브젝트
-    public GameObject panel;
 
     public int score = 0;  // 게임 점수
     public bool victory = false;
@@ -41,27 +40,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("게임 종료");
-            Application.Quit();
-        }
-
-        if (panel.activeSelf==true)
-        {
-            Time.timeScale = 0.0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
-
-        if(victory && flag1 == false)
-        {
-            victory = false;
-            flag1 = true;
-            StartCoroutine("Victory");
-        }
+        GameQuit();
+        VictoryCheck();
     }
 
     public void Restart()
@@ -83,13 +63,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void GameQuit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("게임 종료");
+            Application.Quit();
+        }
+    }
+
     public void OnPlayerDead() //플레이어 캐릭터 사망 시 게임오버를 실행하는 메서드
     {
         isGameover = true;
         gameoverUI.SetActive(true);
         Time.timeScale = 0.1f;
     }
-
+    
+    void VictoryCheck()
+    {
+        if (victory && flag1 == false)
+        {
+            victory = false;
+            flag1 = true;
+            StartCoroutine("Victory");
+        }
+    }
     IEnumerator Victory()
     {
         VictoryUi.SetActive(true);

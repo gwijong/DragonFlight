@@ -8,17 +8,17 @@ public class Enemy_HpBar : MonoBehaviour
     public Image hpBar;
     public Image backHpBar;
     public float yPos = -3;
-    void Start()
-    {
-      
-    }
 
     // Update is called once per frame
     void Update()
     {
-        hpBar.fillAmount = (float)gameObject.GetComponent<EnemyHp>().hp / gameObject.GetComponent<EnemyHp>().maxhp;
+        HpBar();
+    }
 
-        hpBar.rectTransform.position = Camera.main.WorldToScreenPoint(boss.transform.position+ new Vector3 (0, yPos, 0));
+    void HpBar()
+    {
+        hpBar.fillAmount = (float)gameObject.GetComponent<EnemyHp>().hp / gameObject.GetComponent<EnemyHp>().maxhp;
+        hpBar.rectTransform.position = Camera.main.WorldToScreenPoint(boss.transform.position + new Vector3(0, yPos, 0));
         backHpBar.rectTransform.position = Camera.main.WorldToScreenPoint(boss.transform.position + new Vector3(0, yPos, 0));
     }
 }

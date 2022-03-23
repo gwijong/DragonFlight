@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class Logo_UpDown : MonoBehaviour
 {
-
     float time = 0;
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {
+        UpDown();
+    }
+
+    void UpDown()
+    {
         time = time + Time.deltaTime;
 
-        if(time>=0 && time < 1)
+        if (time >= 0 && time < 1)
         {
             this.transform.Translate(0, 1 * Time.deltaTime, 0);
         }

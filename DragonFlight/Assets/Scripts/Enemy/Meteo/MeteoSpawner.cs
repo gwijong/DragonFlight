@@ -21,18 +21,21 @@ public class MeteoSpawner : MonoBehaviour
         speed = Random.Range(-0.8f, 0.8f);
     }
 
-    void Start()
-    {
-
-    }
 
     void Update()
     {
+        SpawnerPosMove();
+        MeteoAttack();
+    }
+
+    void SpawnerPosMove()
+    {
         time2 = time2 + Time.deltaTime;
-        if (time2 <=2)
+        if (time2 <= 2)
         {
-            this.transform.Translate(1*speed * Time.deltaTime, 0, 0);
-        }else if(time2>2 && time2 <= 4)
+            this.transform.Translate(1 * speed * Time.deltaTime, 0, 0);
+        }
+        else if (time2 > 2 && time2 <= 4)
         {
             this.transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
         }
@@ -40,9 +43,9 @@ public class MeteoSpawner : MonoBehaviour
         {
             time2 = 0;
         }
-
-
-
+    }
+    void MeteoAttack()
+    {
         time = time + Time.deltaTime;
         if (time >= 0)
         {
@@ -50,16 +53,16 @@ public class MeteoSpawner : MonoBehaviour
             {
                 flag1 = true;
                 war = Instantiate(WarningLine);
-                war.transform.position = new Vector3(this.transform.position.x,this.transform.position.y+height, this.transform.position.z);
+                war.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + height, this.transform.position.z);
             }
 
             if (time >= 2)
             {
                 time = -12;
                 GameObject met = Instantiate(meteo);
-                met.transform.position = war.transform.position + new Vector3(0,2,0);
-                war.SetActive(false);
-                flag1=false;
+                met.transform.position = war.transform.position + new Vector3(0, 2, 0);
+                Destroy(war, 0.1f);
+                flag1 = false;
             }
         }
     }

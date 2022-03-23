@@ -6,11 +6,6 @@ public class Slime_Child_Move : MonoBehaviour
 {
     public float speed = 1;
     float time = 0;
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {

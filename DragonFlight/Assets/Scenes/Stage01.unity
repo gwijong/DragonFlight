@@ -156,7 +156,6 @@ MonoBehaviour:
   isGameover: 0
   scoreText: {fileID: 327330447}
   gameoverUI: {fileID: 36336834}
-  panel: {fileID: 399613891}
   score: 0
   victory: 0
   VictoryUi: {fileID: 1661289179}
@@ -286,6 +285,7 @@ GameObject:
   - component: {fileID: 14049332}
   - component: {fileID: 14049337}
   - component: {fileID: 14049338}
+  - component: {fileID: 14049339}
   m_Layer: 9
   m_Name: Slime_Boss01_Child1_Child2
   m_TagString: Enemy
@@ -383,7 +383,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   maxhp: 30
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!212 &14049336
 SpriteRenderer:
@@ -464,6 +463,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 3
+--- !u!114 &14049339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14049330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1001 &24771634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,7 +591,7 @@ RectTransform:
   m_Children:
   - {fileID: 190267554}
   m_Father: {fileID: 1380873380}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -709,7 +723,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1380873380}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.008854168}
   m_AnchorMax: {x: 0.13100001, y: 0.071}
@@ -1003,6 +1017,7 @@ GameObject:
   - component: {fileID: 167093542}
   - component: {fileID: 167093547}
   - component: {fileID: 167093548}
+  - component: {fileID: 167093549}
   m_Layer: 9
   m_Name: Slime_Boss01_Child2_Child2
   m_TagString: Enemy
@@ -1100,7 +1115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   maxhp: 30
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!212 &167093546
 SpriteRenderer:
@@ -1181,6 +1195,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 3
+--- !u!114 &167093549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167093540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &190267553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,81 +1812,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &399613891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 399613892}
-  - component: {fileID: 399613894}
-  - component: {fileID: 399613893}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &399613892
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399613891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1380873380}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &399613893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399613891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &399613894
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399613891}
-  m_CullTransparentMesh: 1
 --- !u!1 &433609666
 GameObject:
   m_ObjectHideFlags: 0
@@ -7157,7 +7111,7 @@ RectTransform:
   - {fileID: 165436638}
   - {fileID: 1582109311}
   m_Father: {fileID: 1380873380}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7757,6 +7711,7 @@ GameObject:
   - component: {fileID: 1057367304}
   - component: {fileID: 1057367305}
   - component: {fileID: 1057367306}
+  - component: {fileID: 1057367307}
   m_Layer: 9
   m_Name: Cragon_Boss02
   m_TagString: Enemy
@@ -7863,7 +7818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 500
   maxhp: 500
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!114 &1057367303
 MonoBehaviour:
@@ -7935,6 +7889,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 5
+--- !u!114 &1057367307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057367298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &1062889820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8183135099922900568, guid: 0337524963ffb5d4c85f565bfea2764c, type: 3}
@@ -9118,7 +9087,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 327330450}
-  - {fileID: 399613892}
   - {fileID: 1459844121}
   - {fileID: 86804866}
   - {fileID: 36336835}
@@ -9230,6 +9198,7 @@ GameObject:
   - component: {fileID: 1451999022}
   - component: {fileID: 1451999027}
   - component: {fileID: 1451999028}
+  - component: {fileID: 1451999029}
   m_Layer: 9
   m_Name: Slime_Boss01_Child2_Child1
   m_TagString: Enemy
@@ -9327,7 +9296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   maxhp: 30
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!212 &1451999026
 SpriteRenderer:
@@ -9408,6 +9376,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 3
+--- !u!114 &1451999029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451999020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &1459844120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9439,7 +9422,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1380873380}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13100001, y: 0.008854168}
   m_AnchorMax: {x: 0.224, y: 0.071}
@@ -10308,7 +10291,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1380873380}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.66618747}
   m_AnchorMax: {x: 1, y: 1}
@@ -10488,6 +10471,7 @@ GameObject:
   - component: {fileID: 1712037016}
   - component: {fileID: 1712037017}
   - component: {fileID: 1712037018}
+  - component: {fileID: 1712037019}
   m_Layer: 9
   m_Name: Slime_Boss01
   m_TagString: Enemy
@@ -10535,7 +10519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 120
   maxhp: 120
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!212 &1712037012
 SpriteRenderer:
@@ -10680,6 +10663,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+--- !u!114 &1712037019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712037009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &1740884528
 GameObject:
   m_ObjectHideFlags: 0
@@ -10853,6 +10851,7 @@ GameObject:
   - component: {fileID: 1873940942}
   - component: {fileID: 1873940947}
   - component: {fileID: 1873940948}
+  - component: {fileID: 1873940949}
   m_Layer: 9
   m_Name: Slime_Boss01_Child1_Child1
   m_TagString: Enemy
@@ -10950,7 +10949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   maxhp: 30
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!212 &1873940946
 SpriteRenderer:
@@ -11031,6 +11029,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 3
+--- !u!114 &1873940949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873940940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &1889532000
 GameObject:
   m_ObjectHideFlags: 0
@@ -11990,7 +12003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 60
   maxhp: 60
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!61 &4083450016400335449
 BoxCollider2D:
@@ -12035,6 +12047,7 @@ GameObject:
   - component: {fileID: 4083450016400335451}
   - component: {fileID: 4083450016400335456}
   - component: {fileID: 4083450016400335457}
+  - component: {fileID: 4083450016400335458}
   m_Layer: 9
   m_Name: Slime_Boss01_Child1
   m_TagString: Enemy
@@ -12185,6 +12198,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 5
+--- !u!114 &4083450016400335458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083450016400335450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!224 &4083450017640800004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12789,7 +12817,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 60
   maxhp: 60
-  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
   destroyParticle: {fileID: 8644993209677433218, guid: 799733d0a37465a42ba8fed573a1ecc9, type: 3}
 --- !u!1 &7899268748954978299
 GameObject:
@@ -12808,6 +12835,7 @@ GameObject:
   - component: {fileID: 7899268748954978304}
   - component: {fileID: 7899268748954978305}
   - component: {fileID: 7899268748954978306}
+  - component: {fileID: 7899268748954978307}
   m_Layer: 9
   m_Name: Slime_Boss01_Child2
   m_TagString: Enemy
@@ -12958,6 +12986,21 @@ MonoBehaviour:
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
   oneShoting: 5
+--- !u!114 &7899268748954978307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899268748954978299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6f6d83f5d27bd4c941cd8adbc0b448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 8747555836674742879, guid: 5d066808fb29f2e42a63c59ac6141231, type: 3}
+  coinRange: 0.5
+  coinPower: 20
 --- !u!1 &7899268750130444964
 GameObject:
   m_ObjectHideFlags: 0

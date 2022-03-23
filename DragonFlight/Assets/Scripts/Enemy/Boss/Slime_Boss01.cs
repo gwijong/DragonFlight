@@ -8,15 +8,10 @@ public class Slime_Boss01 : MonoBehaviour
     public GameObject child1;
     public GameObject child2;
     float moveTime;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<EnemyHp>().hp <= 10 && flag1 == false)
+        if (gameObject.GetComponent<EnemyHp>().hp <= 0 && flag1 == false)
         {
             flag1 = true;
             child1.SetActive(true);
