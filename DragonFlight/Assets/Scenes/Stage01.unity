@@ -463,7 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 3
 --- !u!1001 &24771634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 3
 --- !u!1 &190267553
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,7 +7934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 14
+  oneShoting: 5
 --- !u!1 &1062889820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8183135099922900568, guid: 0337524963ffb5d4c85f565bfea2764c, type: 3}
@@ -7973,7 +7973,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087341786}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -7981,7 +7981,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.16
 --- !u!114 &1087341788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9407,7 +9407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 3
 --- !u!1 &1459844120
 GameObject:
   m_ObjectHideFlags: 0
@@ -10666,7 +10666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 12
+  oneShoting: 7
 --- !u!114 &1712037018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11030,7 +11030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 3
 --- !u!1 &1889532000
 GameObject:
   m_ObjectHideFlags: 0
@@ -12184,7 +12184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 5
 --- !u!224 &4083450017640800004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12957,7 +12957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3096070521918440766, guid: eeb89ba34c8149449aa1186c617165fc, type: 3}
   speed: 150
-  oneShoting: 6
+  oneShoting: 5
 --- !u!1 &7899268750130444964
 GameObject:
   m_ObjectHideFlags: 0

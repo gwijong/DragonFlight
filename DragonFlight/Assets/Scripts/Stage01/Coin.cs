@@ -24,7 +24,7 @@ public class Coin : MonoBehaviour
 
         if((transform.position - player.transform.position).magnitude < 3f)
         {
-            transform.Translate((player.transform.position-transform.position).normalized * Time.deltaTime * 15.0f);
+            transform.Translate((player.transform.position-transform.position).normalized * Time.deltaTime * 30.0f);
         }
     }
 
