@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bed7707ff7cea74f8d80896ed61feb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformPrefab: {fileID: 6000873989966785502, guid: a51285c87fbdec941a3f578ff10e174d, type: 3}
+  enemyPrefab: {fileID: 6000873989966785502, guid: a51285c87fbdec941a3f578ff10e174d, type: 3}
   count: 5
   ypos: 10
   xMin: 0

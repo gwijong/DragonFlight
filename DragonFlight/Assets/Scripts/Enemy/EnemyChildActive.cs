@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class EnemyChildActive : MonoBehaviour
 {
-    public GameObject[] Enemys;
     private void OnEnable()
     {
-        for(int i = 0; i < Enemys.Length; i++)
+        for(int i = 0; i < 4; i++)
         {
-            Enemys[i].SetActive(true);
+            transform.GetChild(i).gameObject.SetActive(true);
         }
     }
 
