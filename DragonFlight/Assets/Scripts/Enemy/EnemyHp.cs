@@ -12,6 +12,7 @@ public class EnemyHp : MonoBehaviour
     private void OnEnable()
     {
         isdead = false;
+        hp = maxhp;
     }
     public void Hit(int AttackDamage)
     {

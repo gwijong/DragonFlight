@@ -35,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
                     EnemyHp enemyhp = Enemy[i].transform.GetChild(j).GetComponent<EnemyHp>();
                     Animator animator = Enemy[i].transform.GetChild(j).GetComponent<Animator>();
               
-                    switch (Random.Range(0, 4))
+                    switch (Random.Range(2, 3))
                     {
                         case (int)EnemyList.White:
                             enemyhp.maxhp = 1;
@@ -58,6 +58,10 @@ public class EnemySpawner : MonoBehaviour
                             break;
                     }
                 }
+                int ran = Random.Range(0, 4);
+                Enemy[i].transform.GetChild(ran).GetComponent<EnemyHp>().maxhp = 1;
+                Enemy[i].transform.GetChild(ran).GetComponent<EnemyHp>().hp = 1;
+                Enemy[i].transform.GetChild(ran).GetComponent<Animator>().runtimeAnimatorController = (RuntimeAnimatorController)AssetDatabase.LoadAssetAtPath("Assets/Sprites/Enemy01/Enemy01.controller", typeof(RuntimeAnimatorController));
             }
         }
         lastSpawnTime = 0f;

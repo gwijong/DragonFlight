@@ -48,7 +48,8 @@ public class GameManager : MonoBehaviour
     {
 
          Debug.Log("재시작");
-         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 
